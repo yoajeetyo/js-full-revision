@@ -59,3 +59,67 @@ let someNumber1 = 44
 let stringSomeNumber1 = String(someNumber1)
 console.log(stringSomeNumber1);         // "44"
 console.log(typeof stringSomeNumber1);  // string
+
+
+
+
+
+// ********************************************************* Operations ************************************
+
+let value = 3
+let negativeValue = -value      // converting value to negative
+console.log(negativeValue);
+
+
+console.log(2**4);  // 16 (2 raise to the power 4)
+console.log(2%3);   // 2 (remainder)
+
+
+let str1 = "Hello"
+let str2 = " Ajeet"
+let str3 = str1 + str2
+console.log(str3);
+
+
+// operations happen from left to right (if there is string at first position then it will make string evetything)
+console.log("3" + 1 + 5); // 315
+
+console.log(3 + 5 + "3"); // 83 (first it will do mathematical operation then it will add to string value and make a string)
+
+console.log(+true); // 1 (this type of code is not appreciated)
+
+//console.log(true+); // error (not valid)
+
+console.log(+""); // 0 (not recommended to write this type of code)
+
+console.log(+"Ajeet"); // NaN (not recommended to write this type of code)
+
+
+let num1, num2, num3
+num1 = num2 = num3 = 3+6 // (not recommended to write this type of code)
+
+console.log(num1)
+console.log(num2)
+console.log(num3)
+
+
+// let gameCounter = 100
+// gameCounter++               //postfix (first assign then increase)
+// console.log(gameCounter); // 101
+
+// let gameCounter = 100
+// ++gameCounter               //postfix (first increase then assign)
+// console.log(gameCounter); // 101
+
+
+// let gameCounter = 100
+// console.log(++gameCounter); // 101 (prefix)
+
+// let gameCounter = 100
+// console.log(gameCounter++); // 100 (postfix)
+
+
+
+
+
+
