@@ -79,3 +79,44 @@
 // console.log(typeof(["Ajeet", "Hi", "Raj", "Sam"])); // object
 // console.log(typeof({"Name":"Ajeet", "Age":18})); // object
 // console.log(typeof(function(){console.log("Hi");})); // function
+
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//there are two types of memory in JavaScript
+// Stack, Heap
+// Stack(for Primitive datatypes everywere used Stack Memory): whatever variable is declared we will get copy of it
+// Heap(for non-premitive datatype Heap memory used everywhere): whatever object or variable is declared inside we will get 
+                                                //original refrence of that when we make changes it will reflact in original value 
+
+
+// example of stack
+
+// let myName = "Ajeet"
+// let anotherName = myName; //(copy of myName will be shared to anotherName)
+// console.log(anotherName); // Ajeet
+// anotherName = "Raju";       // (because copy of myName is given to anotherName, if we change anotherName, myName won't change)
+// console.log(anotherName); // Raju (previously anotherName was Ajeet now become Raju)
+// console.log(myName); // Ajeet (myName wont change)
+
+
+
+// example of Heap
+// let userOne = {
+//     email : "user@gmail.com",
+//     age : 18
+// }
+
+// console.log(userOne);
+
+// let userTwo = userOne // userTwo will get exact reference of userOne in heap so any changes in userTwo will also reflact in userOne
+// console.log(userTwo);
+
+// userTwo.email = "ajeet@gmail.com"; // when we change userTwo email it will change the email in userOne also
+
+// console.log(userTwo.email);
+// console.log(userOne.email);
+
+
