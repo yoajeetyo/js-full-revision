@@ -72,4 +72,65 @@
 
 
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++ Maths +++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// Math is a default Object inside JavaScript where there are so many methods to do operations
+// if we will write below statement  in console of browser then we will get so many methods and properties of Math object
+// console.log(Math);
+
+// // to get the PI value
+// console.log(Math.PI); // 3.141592653589793
+
+// // to get square root of 2
+// console.log(Math.SQRT2); // 1.4142135623730951
+
+// // to get absolute values (for example absolute value of -4 is 4, absolute value of 4 is 4)
+// console.log(Math.abs(-4)); // 4
+// console.log(Math.abs(4)); // 4
+// console.log(Math.abs(-4.98)); // 4.98
+// console.log(Math.abs(4.98)); // 4.98
+
+
+// to round off we have round() function
+// console.log(Math.round(4.3)); // 4 
+// console.log(Math.round(4.6)); // 5
+// console.log(Math.round(4.499)); // 4
+// console.log(Math.round(4.5)); // 5
+
+
+// to get the ceiling and floor value
+// console.log(Math.ceil(4.3)); // 5
+// console.log(Math.floor(4.9)); // 4
+
+
+
+// to get the min and max values in given numbers
+// console.log(Math.min(1, 0, -8, 8)); // -8
+// console.log(Math.max(1, 0, -8, 8)); // 8
+
+
+
+
+
+// to print rendom numbers we have random() function in Math 
+// console.log(Math.random()); //it will generate random numbers between 0 and 1
+
+// generating random number in the fixed range
+// between 0 to 10
+// console.log(Math.random()*10);
+
+// random number between 1 to 10
+// console.log((Math.random()*10) + 1);
+
+//to print the floor value in the range of 1 to 10
+// console.log(Math.floor((Math.random()*10)+1));
+
+// we can define particular range (10 to 20)
+// const min = 10
+// const max = 20
+// console.log(Math.floor(Math.random()*(max - min +1))+min); // VVVVI
+
+
+
 
