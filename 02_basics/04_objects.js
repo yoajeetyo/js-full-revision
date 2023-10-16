@@ -103,6 +103,63 @@
 
 
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++ Destructuring of an Object +++++++++++++++++++++++++
+
+// const course = {
+//     courseName : "JavaScript in Hindi",
+//     courseInstructor : "Ajeet",
+//     courseFees : "Rs. 999"
+// }
+
+//(suppose if we want to get courseInstructor)
+//first way of destructuring
+// console.log(course.courseInstructor); // Ajeet  (if we want to use this courseInstrictor then we need to write course.courseInstructor multiple time)
+
+// // second way (in this way we will destructure courseInstructor from course object and store in one variable and we can use the varible where ever requires )
+// const {courseInstructor} = course
+// console.log(courseInstructor); // Ajeet (here we do not needs to write course.courseInstructor every time)
+
+// if we found courseInstructor as large name, then we can give it a short name and use it
+// const {courseInstructor : instructor} = course
+// console.log(instructor); // Ajeet
+
+
+
+
+
+
+
+// Data coming from backend or server is in the form of JSON (JavaScript Object Notation) (Key, value form both are string)
+// JSON data
+// {
+//     "name" : "Ajeet",
+//     "age" : 24,
+//     "isLoggedIn" : false
+// }
+
+
+
+// mostly api calls are coming in JSON formate but sometimes it comes in xml or in the form of array of objects
+// [
+//     {},
+//     {},
+//     {},
+//     {}
+// ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
