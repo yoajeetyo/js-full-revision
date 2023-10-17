@@ -54,3 +54,74 @@
 
 
 
+
+
+
+// +++++++++++++++++++++++++++++++++++++ nested scope ++++++++++++++++++++++++++++++++++++++
+// function funcOne(){
+//     const userName = "Ajeet"
+
+//     function funcTwo() {
+//         const website = "facebook"
+//         console.log(userName);
+//     }
+//     //console.log(website); // we can not access website outside function funcTwo()
+
+//     funcTwo()
+// }
+
+// funcOne() // Ajeet (due to funcTwo() call inside funcOne()) (if we will not call funcTwo() inside funcOne() then it will not print anything)
+
+// what is closure?
+// child block accessing the variables from parent block, it is known as closure
+
+
+// scopes in if block
+
+// if (true) {
+//     const firstName = "Ajeet"
+
+//     if (firstName === "Ajeet") {
+//         const lastName = " Singh"
+//         console.log(firstName + lastName); // Ajeet Singh
+//     }
+//     //console.log(lastName); // we can not access lastName outside inner if 
+// }
+
+//console.log(firstName); // we cannot access firstName outside if loop
+
+
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++ Interesting Concept ++++++++++++++++++++++++++++++++++++++++++++++
+
+// if we declare simple function, we can access it from anywhere
+// console.log(func1(199)) // 200
+
+// function func1(num1) {
+//     return num1+1
+// }
+
+// console.log(func1(99)) // 100 
+
+
+
+
+// if we will declare a function and hold it in a variable, then we can access after declaration of function not before declaration
+// console.log(varToHoldFunction(199)) // Error (in this way we can not access the function before initialization)
+
+// const varToHoldFunction = function func1(num1) {
+//     return num1+1
+// }
+
+// console.log(varToHoldFunction(99)) // 100 
+
+
+
+
+
+
+
+
