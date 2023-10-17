@@ -82,3 +82,82 @@
 // console.log(loggedInUser("Ajeet")); // Ajeet just loggedIn
 
 
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++ rest or spread operator as a function parameter ++++++++++++++++++++++++++
+// general way of calling a function with multiple parameter
+// function addToCartPrice(price1, price2, price3, price4) { // this is not a good way
+//     return price1+price2+price3+price4;
+// }
+
+// console.log(addToCartPrice(100,200,300,400)); // 1000
+
+
+// using rest or spread operator way of calling a function with multiple parameter
+// function addToCartPrice(...prices) { // this is recommended way
+//     return prices;
+// }
+
+// console.log(addToCartPrice(100,200,300,400)); // [ 100, 200, 300, 400 ] (we will get an array of prices and we can perform operations we want)
+
+
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++++ passing an object to function and perform operation +++++++++++++++++++++++++
+// const user = {
+//     userName : "Ajeet",
+//     userLocation : "Bangalore"
+// }
+
+// function handleUser(anyUser) {
+//     console.log(`User is ${anyUser.userName} and location is ${anyUser.userLocation}`);
+// }
+
+// handleUser(user) // User is Ajeet and location is Bangalore
+
+
+// we do not needs to define object saperately and passing it while function call, we can pass it anonymousley 
+// function handleUser(anyUser) {
+//     console.log(`User is ${anyUser.userName} and location is ${anyUser.userLocation}`);
+// }
+
+// handleUser({userName : "Ajeet", userLocation : "Pune"}) // User is Ajeet and location is Pune
+
+
+
+
+
+// +++++++++++++++++++++++++++++ we can pass array while function calling +++++++++++++++++++++++++
+// passing an array and return 2nd value
+// const nameArray = ["Ajeet", "Ram", "Shyam", "Raju"]
+
+// function returnSecondValue(nameArray) {
+//     return  nameArray[1]   
+// }
+
+// console.log(returnSecondValue(nameArray)); // Ram
+
+
+
+
+// we can pass array annonymousley
+// function returnSecondValue(nameArray) {
+//     return  nameArray[1]   
+// }
+
+// console.log(returnSecondValue(["Raj", "Sam", "Joy", "Milan"])); // Sam
+
+
+
+
+
+
+
+
+
+
+
+
