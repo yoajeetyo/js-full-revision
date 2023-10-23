@@ -36,9 +36,71 @@
 
 
 
+// Map
+
+// The Map object holds key-value pairs and remembers the original insertion order of the keys. 
+// Any value (both objects and primitive values) may be used as either a key or a value.
+// key is always unique
+
+// const map =  new Map();
+// map.set("IN", "India")
+// map.set("USA", "United States of America")
+// map.set("FR", "France")
+// map.set("ESPN", "Spain")
+// map.set("IN", "India")    // it wont print india again
+// console.log(map);
+
+// Output:- Map(4) {
+        //   'IN' => 'India',
+        //   'USA' => 'United States of America',
+        //   'FR' => 'France',
+        //   'ESPN' => 'Spain'
+        // } 
 
 
 
+
+
+
+// destructuring of Map using for of
+
+// const map =  new Map();
+// map.set("IN", "India")
+// map.set("USA", "United States of America")
+// map.set("FR", "France")
+// map.set("ESPN", "Spain")
+// map.set("IN", "India")    // it wont print india again
+
+// for (const [key, value] of map) {
+//     console.log(key, ":-", value);
+// }
+
+
+
+// Output:- IN :- India
+        // USA :- United States of America
+        // FR :- France
+        // ESPN :- Spain
+
+
+
+
+
+
+
+
+// destructuring of object using for of loop wont work in this way
+
+// const hero = {
+//     h1 : "Superman",
+//     h2 : "Batman"
+// }
+
+// for (const [key, value] of hero) {
+//     console.log(key, ":-", value);
+// }
+
+// Output:- Error (hero is not iterable) (we need to use different way to iterate object)
 
 
 
