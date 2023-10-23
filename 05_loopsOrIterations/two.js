@@ -23,3 +23,35 @@
 
 
 
+// do while loop
+
+// let score = 1
+// do {
+//     console.log(`Score is ${score}`);
+//     score++
+// } while (score <= 10);
+
+
+// do while runs at least once no matter what is the condition
+
+// let score = 11
+// do {
+//     console.log(`Score is ${score}`);
+//     score++
+// } while (score <= 10);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
