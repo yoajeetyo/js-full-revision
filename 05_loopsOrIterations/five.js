@@ -78,7 +78,7 @@
 //     }
 // ]
 
-// myObj.forEach((item) => {
+// myObj.forEach((item) => {                    // here item represents each object in the array
 //     console.log(item.name, item.age);
 // })
 
