@@ -1,22 +1,38 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 class = "heading">DOM learning in detail</h1>
+<body class = "bg-black">
+    <div>
+        <h1 id = "title" class = "heading">DOM learning in detail <span style ="display : none;">test text</span> </h1>
+        <h2>this is first h2</h2>
+        <h2>this is second h2</h2>
+        <h2>this is third h2</h2>
+        <h2>this is fourth h2</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <input type="password" name="" id="">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
     </div>
 </body>
-</html> -->
+</html>
 
 
 
 
 
-// DOM stands for document object model
+<!-- // DOM stands for document object model
 // all the document or html getting created from object (eg: head, body, h1, p, ...etc.)
 // first object or root object will be window
 // inside window there is document object
@@ -28,7 +44,193 @@
 // now inside body there is div child object
 // div has 1 class attribute and 2 child object h1 and p
 // inside h1 there is class attribute and text node
-// inside p there is text node
+// inside p there is text node -->
+
+
+
+
+<!-- // after running above written code on browser do inspect and go to console and write the code and run -->
+
+<!-- // document.getElementById("title")
+// output:- <h1 id = "title" class = "heading">DOM learning in detail</h1>  -->
+
+
+<!-- // document.getElementById("title").id
+// output:-  'title' -->
+
+
+<!-- // document.getElementById("title").class
+// output:- undefined (because inside DOM manipulation class is known as className not class) -->
+
+
+<!-- // document.getElementById("title").className
+// output:-  'heading'  -->
+
+
+
+
+<!-- // we can get attributes using getAttribute() function, we need to pass key and we will get value -->
+
+<!-- // document.getElementById("title").getAttribute('id')
+// output:-  'title'  -->
+
+<!-- // document.getElementById("title").getAttribute('class')
+// output:-  'heading'  -->
+
+
+
+
+
+<!-- // we can also se the values of attributes using setAttribute() function, we need to pass the key value to set the attributes value -->
+
+<!-- // document.getElementById("title").setAttribute('id', 'my-title')
+// output:-  undefined (but if we check inside Elements of browser then we will get that id is updated from title to my-title) 
+// In the same way we can also set the class attribute -->
+
+
+
+
+
+<!-- // we can store these element inside the variable and perform operation on that variable-->
+
+<!-- // const title = document.getElementById("title") -->
+
+
+<!-- // Adding css on the stored variable -->
+
+<!-- // title.style.backgroundColor = 'green'
+// title.style.padding = '15px'
+// title.style.borderRadius = '15px' -->
+
+
+
+
+
+
+
+
+<!-- // JS part-2 (interesting topic 29:00)
+// how to add the content in browsers console -->
+
+<!-- // const title = document.getElementById("title") -->
+
+<!-- to get all the text content inside title we will use textContent or innerHTML or innerText -->
+
+<!-- title.textContent
+output:- 'DOM learning in detail' -->
+
+<!-- title.innerHTML
+output:- 'DOM learning in detail' -->
+
+<!-- title.innerText
+output:- 'DOM learning in detail' -->
+
+
+
+
+
+<!-- // difference between innerText and innerContent
+// for that we will add one more <span style ="display : none;" >test text</span> inside body->div->h1 of above code 
+and go again to browsers, there no content will show written inside span tag, 
+and inside console we can run title.textContent and title.innerText,
+we will see title.innerText will return only 'DOM learning in detail'(only those text are shown which are visible) and
+title.textContent will return 'DOM learning in detail test text '(here hidden text also included) -->
+
+
+<!-- // title.innerHTML will show everything including inner HTML tag here span tag inside h1
+// output:- 'DOM learning in detail <span style="display : none;">test text</span> ' -->
+
+
+<!-- // document.getElementsByClassName('heading')  will return  HTMLCollection[] -->
+
+
+
+
+
+
+<!-- //+++++++++++++++++++++++++++++ some important query selectors +++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<!-- 
+    
+    // for this we need to add some h2 tags in body
+    // write these query inside console of browser
+
+    // document.querySelector('h2')     (this query will select first h2 element)
+    // <h2>​this is first h2​</h2>​ 
+
+    
+    // document.querySelectorAll('h2')    (this query will return list of h2 and siz of list)
+
+    // document.querySelector('#title')    (select the element which has id as "title") (# for id name)
+    // <h1 id=​"title" class=​"heading">​"DOM learning in detail "<span style=​"display :​ none;​">​test text​</span>​</h1>​
+
+    // document.querySelector('.heading') (select the first element which has class as "heading") (. for class name)
+    //<h1 id=​"title" class=​"heading">​"DOM learning in detail "<span style=​"display :​ none;​">​test text​</span>​</h1>​
+
+    // add a password field in the above code and run the below code in browsers console
+    // document.querySelector('input[type="password"]')      (like this we can select any input fields)
+    // <input type=​"password" name id>​
+
+
+
+    // we will create unordered-list and pass 3 list inside it
+    // suppose we want to change the bg-colour of first li 
+    // first we will get ul in a variable
+    // then we will extract first li in another variable
+    // then we will apply style on that variable which stores first li
+
+    // const unorderedList = document.querySelector('ul')
+    // const firstList = unorderedList.querySelector('li')
+    // firstList.style.backgroundColor = "green"
+    // firstList.style.padding = "10px"
+
+-->
+
+
+
+
+
+<!-- 
+    // querySelector() will give only one value
+    // to select multiple value we have querySelectorAll(), which returns list of nodes or NodeList,
+                                                             which looks like Array but its not an Array
+    // As we know we can apply forEach() and map() on Array but on NodeList we can only apply forEach() not map()
+
+    // Operations using  querySelector()
+
+    // suppose we want to select all the li element from document and store in a variable tempLiList
+    // const tempLiList = document.querySelectorAll('li')
+    // because in our document there are 3 li element so tempLiList will return NodeList(3) [li, li, li]
+    // when we will expand NodeList and expend Prototype further, then we will get all the methods available to perform operations on tempLiList
+    // tempLiList is list of individual element so we can not perform direct operations on tempLiList
+    // we need to perform operation on the element inside tempLiList
+    // as we know there are 3 li element in tempLiList
+    // suppose we want to apply css on first element, we can access using index like tempLiList[0], tempLiList[1], tempLiList[2]
+    // tempLiList[0].style.color = "green" , will make first li element color green
+
+    // if there is single element in the list we need to perform operations in same way, using index
+    // there is 1 h1 
+    // const myH1 = document.querySelectorAll("h1");
+    // myH1[0].style.color ="green"
+
+
+    // forEach() on tempLiList
+    // const tempLiList = document.querySelectorAll('li')
+    // tempLiList.forEach((li) => {li.style.color = "red"})       (this code will change the color of all the li element to red)
+
+    // we can also convert NodeList to Array if we want and we can perform all the operation of Array
+
+-->
+
+
+
+
+
+
+
+
+
+
 
 
 
