@@ -1,0 +1,86 @@
+<!-- //++++++++++++++++++++++++++++++++++++++++++++++++++++ Relations +++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+<!-- // there are many types of relations
+// parent - child relations
+// child - parent relations
+// child - child relations
+
+
+
+// All relations will help us to add the elements into document
+// taking data from Database storing into an Array and then display on to web-page
+// we can display into different form using buttons, cards, etc.
+// how to generate new element or how to remove element -->
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Learning</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+
+    let parentClassElement = document.querySelector(".parent")
+    // console.log(parentClassElement);             // it will return all the element which is present inside class parent
+    // console.log(parentClassElement.children);      // it will return HTMLCollection 
+    // console.log(parentClassElement.children[1]);      // it will return 2nd node
+    // console.log(parentClassElement.children[1].innerHTML);      // it will return 2nd nodes inner html which is Tuesday
+
+
+    // we can print all the values inside node using for loop
+
+    // for (let i = 0; i < parentClassElement.children.length; i++) {
+    //     console.log(parentClassElement.children[i].innerHTML);
+    // }
+
+    
+    // we can also change styling (suppose we want to make color orange of Tuesday)
+
+    // parentClassElement.children[1].style.color = "orange"
+
+
+    // we can get first and last element of the collection (parent to child relation)
+
+    // console.log(parentClassElement.firstElementChild);
+    // console.log(parentClassElement.lastElementChild);
+
+
+    // child to parent relation
+    // const firstDay = document.querySelector('.day')     // it will return the first element  which has class as day
+    // console.log(firstDay);
+    // console.log(firstDay.parentElement);                // we will gwt the parent element of the first element which has class name as day
+    
+    // we can also do operation child to child relation
+    // we can get next adjecent sibling element
+    // console.log(firstDay.nextElementSibling);           // it will return <div class="day">Tuesday</div>
+
+
+
+    // important timestamp js part-2, 1 hour 16 min (childNodes)
+    // console.log("NODES: ", parentClassElement.childNodes);
+    // it will return child nodes of parent class div element, as per our thinking we think it has 4 child nodes
+    // but it also count line-break and comment as a node thats why it returns count of all as child node.
+
+
+
+
+
+</script>
+</html> 
+
+-->
+
