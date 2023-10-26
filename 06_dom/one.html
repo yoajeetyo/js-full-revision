@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
         </ul>
     </div>
 </body>
-</html>
+</html> -->
 
 
 
@@ -221,6 +221,85 @@ title.textContent will return 'DOM learning in detail test text '(here hidden te
     // we can also convert NodeList to Array if we want and we can perform all the operation of Array
 
 -->
+
+
+
+
+
+
+
+
+<!-- //+++++++++++++++++++++++++++++++++++++++++++ getElementsByClassName() ++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class = "bg-black">
+    <div>
+        <h1 id = "title" class = "heading">DOM learning in detail <span style ="display : none;">test text</span> </h1>
+        <h2>this is first h2</h2>
+        <h2>this is second h2</h2>
+        <h2>this is third h2</h2>
+        <h2>this is fourth h2</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <input type="password" name="" id="">
+        <ul>
+            <li class = "list-item">one</li>
+            <li class = "list-item">two</li>
+            <li class = "list-item">three</li>
+            <li class = "list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- 
+
+// on above code we will select all the li element which has class = "list-item"
+
+// document.getElementsByClassName('list-item')
+// HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item] 
+
+// getElementsByClassName() is returning HTMLCollection which is totally different from NodeList 
+// on HTMLCollection there is no looping facility like forEach or map
+
+// we need to convert HTMLCollection into Array to use Arrays property like forEach or map
+
+// first we will store it into a variable
+// const classList = document.getElementsByClassName('list-item')
+
+// then convert it into Array and store into a variable
+// const convertedArray = Array.from(classList)
+
+// [li.list-item, li.list-item, li.list-item, li.list-item]  (we got the Array, now we can apply all the property of Array on it)
+
+// we can apply below function to change the color of li to orange
+
+// convertedArray.forEach(function (li) {
+    li.style.color = "orange"
+}) 
+
+-->
+
+
+
+
+
 
 
 
