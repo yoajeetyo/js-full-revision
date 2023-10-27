@@ -1,0 +1,54 @@
+<!-- // Creating element, adding properties(class, id, style, ...etc.),
+     adding text to element and displaying it on document body using JavaScript from script tag -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    // We can create element using createElement() function and store it into a variable to do further operation
+
+    const div = document.createElement("div")   // we are creating div element here but we can create any element we want
+    console.log(div);
+    div.className = "main"    // adding class in div element which value is main
+    // div.id = "myId"       // we can give id like this or we can also give random id using Math object in js like below
+    div.id = Math.round(Math.random() * 10 + 1)   // it will give random id from 1 to 11
+
+    // we can set our own created attribute and set its value also using setAttribute() function like below
+    div.setAttribute("title", "generated-attribute")   // it will generate title attribut with value generated-attribute
+    
+    // we can add styling like below
+    div.style.color = "green"
+    div.style.padding = '10px'
+
+    // we can add text to inside the element using innerHTML or innerText
+    // div.innerText = "Inside document body from Script tag"
+
+    // line 25, 26, 27, 33, 34, 37, these are overriding the values so sometime this is not the correct way 
+    // line 30 is the correct way, setAttribute() will directly set the values not override
+
+    // preferred way to add text
+    const addText = document.createTextNode("Inside document body from Script tag 2nd way")
+    div.appendChild(addText)
+
+    // Now we will attach into document body
+    document.body.appendChild(div)
+
+
+    // we can wrap it all inside a function like createNewDiv and pass the argument for text array and color array and use it dynamically
+
+
+</script>
+</html>
