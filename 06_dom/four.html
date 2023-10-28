@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+
+    function addLanguage(languageName) {
+        const li = document.createElement("li")
+        li.innerHTML = `${languageName}`
+        document.querySelector(".language").appendChild(li)
+    }
+
+    addLanguage("Python");
+    addLanguage("Java");
+    addLanguage("Golang");   // this is not the good way because every time it is traversing whole tree to create and append element 
+
+
+    // we can use optimized way
+    function addOptiLanguage(languageName) {
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(languageName))
+        document.querySelector(".language").appendChild(li)
+    }
+
+    addOptiLanguage("HTML")
+
+
+
+    // Now how to edit values (suppose we want to edit the 2nd li element Python to Linux)
+    const secondLi = document.querySelector("li:nth-child(2)")
+    // secondLi.innerHTML = "Linux"   // this way is not optimized way
+    // below one is optimized one
+    const replacedLi = document.createElement("li")
+    replacedLi.textContent = "Linux"
+    secondLi.replaceWith(replacedLi)
+
+
+    // another way to edit or replace (here we will replace first li, Javascript to Typescript)
+    // const firstLi = document.querySelector("li:nth-child(1)")    // we can select first li element this way or below way
+    const firstLi = document.querySelector("li:first-child")
+    firstLi.outerHTML = "<li>Typescript</li>"
+
+    // how to remove element (we will remove HTML)
+    const goLi = document.querySelector("li:last-child")
+    goLi.remove()
+
+
+
+</script>
+</html>
