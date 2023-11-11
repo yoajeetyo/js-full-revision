@@ -1,0 +1,54 @@
+<!-- // At present we send request using fetch(), but in older days we were requesting using XMLHttpRequest
+
+// ---------------------------------------- XMLHttpRequest ------------------------------------------
+
+// It is still in use in so many frameworks
+
+states :-
+            value 0 means state is UNSENT  (client has been created. open() not yet called) (means request not sent yet)
+            value 1 means OPENED state (open() has been called ) (means request has been sent)
+            value 2 means HEADER_RECIEVED state (send() has been called, and headers and status are available.)
+            value 3 means LOADING state (Downloading; responseText holds partial data)
+            value 4 means DONE state (the operation is complete) -->
+
+
+
+<!-- // Example of Ajax Request (XML) -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Request</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/yoajeetyo"
+    const xhr = new XMLHttpRequest();  // XMLHttpRequest() has many methods which is used to send and accept the request
+    xhr.open("GET", requestUrl)
+    xhr.onreadystatechange = function () {  // this function will help to get the state of request dynamically
+        console.log(xhr.readyState);        // this will print the state of request
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)  // this line will get the response(string) and convert into json object
+            // console.log(data);
+            console.log(data.html_url);  // to print the html_url, present inside response object
+        }
+    }
+    
+    xhr.send()
+
+</script>
+</html> -->
+
+
+
+
+
+
+
+
+
+
